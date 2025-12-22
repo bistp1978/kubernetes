@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: client
-      image: prashantbist/complexclient
+      image: prashantbist/complexworker
       ports:  
         - containerPort: 3000

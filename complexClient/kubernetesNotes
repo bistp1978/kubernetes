@@ -1,0 +1,1 @@
+kubectl set image Deployment/client-deployment client=prashantbist/complexclient:v3.0
