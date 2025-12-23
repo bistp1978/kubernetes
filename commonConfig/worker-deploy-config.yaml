@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: worker-deployment 
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       component: worker
@@ -15,3 +15,12 @@ spec:
       containers:
         - name: worker
           image: prashantbist/complexworker
+          envFrom:
+            - configMapRef:
+                name: worker-config-map
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD

@@ -1,1 +1,4 @@
 kubectl set image Deployment/client-deployment client=prashantbist/complexclient:v3.0
+
+
+kubectl create secret generic postgrespassword  --from-literal POSTGRES_PASSWORD=docker 
