@@ -1,0 +1,7 @@
+stages:
+  - test
+
+hello:
+  stage: test
+  script:
+    - echo "Pipeline triggered successfully on a commit!"
